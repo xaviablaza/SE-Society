@@ -1,0 +1,36 @@
+Alpha release should provide following requirements:
+
+REQ #1 - SEoS website shall provide a top bar with the following sections: 
+Future Software Engineers / Professional Development /  Standards & Resources / About SoSE
+Example - https://www.soa.org/Member/
+
+REQ #2 Future Software Engineers section shall expand out to pages with 
+What is a Software Engineer?
+Day in the Life
+Career Paths
+
+Req #3 Professional Development section shall expand out to pages with:
+Exams & Certifications
+Books
+Software Engineer of the future
+
+Req #4 Standards and Resources section shall expand to pages with:
+Code of Professional Conduct
+SE Coding Standards & Best Practices
+Employer scoring
+Salaries and Demographics
+Podcasts
+
+Req #6 SEoS website shall provide a listing of geographically related events on the homepage
+
+REQ #7 SEoS website shall provide a listing of geographically related job opportunities 
+
+REQ  #8  - SEoS website shall provide an ability to create an account and login 
+i.e. https://myaccount.assh.org/NC__Login?startURL=%2Fnc__profilesnapshot
+
+REQ #9 SEoS website shall Integrate with twitter feed and display on SE website 
+
+REQ #10 SEoS website shall have an admin login showing admin statistics
+ +number of users registered 
+ +number of website views
+
