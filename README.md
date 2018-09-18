@@ -1,24 +1,26 @@
-# README
+## Deployment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You will need to install kubectl and configure your kubeconfig file before doing this.
 
-Things you may want to cover:
+This is deployed in Kubernetes. Here's an example command to run to deploy staging:
 
-* Ruby version
+```sh
+KUBECONFIG=~/.kube/config ENVIRONMENT=staging REVISION=`git rev-parse --verify master` kubernetes-deploy sesoc-staging kubernetes-admin@kubernetes
+```
 
-* System dependencies
+**Note**
+- migrations are always run
 
-* Configuration
+Variables:
 
-* Database creation
+- KUBECONFIG: the kubernetes config file. If yours is in `~/.kube/config` *and* you have [direnv](https://direnv.net) installed, you can omit this. If yours is not in the default path, you can `echo export KUBECONFIG=/path/to/mine > .envrc.local` and omit it during deployment.
+- ENVIRONMENT: what environment we're deploying; determines `deploy/#{environment}`
+- REVISION: sets `current_sha` in the templates
+- `default` is the staging namespace.
+- `kubernetes` is the name of the cluster. If you have direnv installed, you can use `$CLUSTER` instead.
 
-* Database initialization
+With direnv setup, the command can look like this:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+ENVIRONMENT=staging REVISION=`git rev-parse --verify master` kubernetes-deploy sesoc-staging $CLUSTER
+```
