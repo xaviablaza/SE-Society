@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-migrate-<%= deployment_id %>
+  namespace: sesoc-staging
+spec:
+  # Max of 10 minute migrations; can adjust if we have longer ones
+  activeDeadlineSeconds: 600
+  restartPolicy: Never
+  containers:
+    - name: web-migrate
+      image: sesociety/se330:<%= current_sha %>
+      command: ["bundle", "exec", "rails", "db:migrate"]
+      env: <%= partial "env" %>
