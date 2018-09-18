@@ -18,6 +18,7 @@ jobs:
 
     steps:
       - checkout
+      - setup_remote_docker
 
       # Download and cache dependencies
       - restore_cache:
@@ -63,6 +64,7 @@ jobs:
           command: |
             set +o pipefail
             docker load -i /caches/app.tar | true
+
       - run:
           name: Build application Docker image
           command: |
