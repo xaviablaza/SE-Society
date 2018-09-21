@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web
+  namespace: sesoc-staging
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: sesoc.uxsociety.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web
+          servicePort: web-port
+  - host: sose.uxsociety.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web
+          servicePort: web-port
