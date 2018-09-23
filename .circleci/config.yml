@@ -1,5 +1,3 @@
-# Ruby CircleCI 2.0 configuration file
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
 version: 2
 jobs:
   build:
@@ -10,7 +8,6 @@ jobs:
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
        - image: circleci/postgres:9.6
          environment:
            POSTGRES_USER: postgres
@@ -43,7 +40,6 @@ jobs:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
-      # Database setup
       - run:
           name: copy sample database
           command: |
@@ -51,20 +47,23 @@ jobs:
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
 
-      # run tests!
-      # if test = pass -> run Docker stuff
-      # if test = failed -> dont run Docker stuff
       - run:
           name: run tests
           command: |
             bundle exec rspec spec
+
+      - restore_cache:
+          keys:
+            - v1-{{ .Branch }}
+          paths:
+            - /tmp/caches/app.tar
 
       # Docker stuff
       - run:
           name: Load Docker image layer cache
           command: |
             set +o pipefail
-            docker load -i $HOME/caches/app.tar | true
+            docker load -i /tmp/caches/app.tar | true
 
       - run:
           name: Build application Docker image
@@ -74,15 +73,14 @@ jobs:
       - run:
           name: Save Docker image layer cache
           command: |
-            mkdir -p $HOME/caches
-            docker save -o $HOME/caches/app.tar app
+            mkdir -p /tmp/caches
+            docker save -o /tmp/caches/app.tar app
 
       - save_cache:
           key: v1-{{ .Branch }}-{{ epoch }}
           paths:
-            - /caches/app.tar
+            - /tmp/caches/app.tar
 
-      # Configure Docker hub login credentials
       - deploy:
           name: Push application Docker image
           command: |
