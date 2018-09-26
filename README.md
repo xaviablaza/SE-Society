@@ -3,6 +3,8 @@
 
 Staging: https://sose.uxsociety.org
 
+Design: https://www.figma.com/file/Nyu25Zl5hiW4BrUCS2U7OK6j/SeSociety
+
 ## Deployment
 
 You will need to install kubectl and configure your kubeconfig file before doing this.
