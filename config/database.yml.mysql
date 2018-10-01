@@ -1,0 +1,19 @@
+---
+development: &default
+  adapter: sqlite3
+  encoding: utf8
+  database: se330_db
+  pool: 5
+  username: root
+  password: se330
+  host: 178.128.60.23
+  port: 3306
+  # host: db # running all in services
+
+test:
+  <<: *default
+  database: sesoc_test
+
+production:
+  <<: *default
+  database: sesoc_production
