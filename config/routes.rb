@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       root "dashboard#show"
     end
 
+    authenticated do
+      root "homepage#homepage"
+    end
+
     unauthenticated do
       root "devise/sessions#new"
     end

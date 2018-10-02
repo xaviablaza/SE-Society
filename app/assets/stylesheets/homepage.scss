@@ -1,0 +1,121 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+    background-color: #edeeef;
+    overflow: hidden;
+}
+
+.header a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.header a:hover {
+    background-color: #9b2603;
+    color: black;
+}
+
+.header a.active {
+    background-color: #5e5c5c;
+    color: white;
+}
+
+.main {
+  float: center;
+  text-align: left;
+  font-size: 45px;
+  margin-left: 75px;
+}
+
+.container{
+  margin-right: 75px;
+  margin-top: -40px;
+}
+
+.container-main {
+  height: 550px;
+  width: 100%;
+  background-color: lightgray;
+  //background-image: url('../images/keck.jpg');
+}
+
+.nav {
+    background-color: #5e5c5c;
+    overflow: hidden;
+}
+
+.nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav a:hover {
+    background-color: #9b2603;
+    color: black;
+}
+
+.nav a.active {
+    background-color: #5e5c5c;
+    color: black;
+}
+
+.join-container {
+  float: left;
+  height: 350px;
+  width: 250px;
+  background-color: gray;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.join {
+  margin: 10px;
+  font-size: 21px;
+}
+
+.button {
+  margin-top: 25px;
+  border-radius: 21px;
+  padding: 12px 16px;
+  font-size: 24px;
+}
+
+.grid-container {
+  display: grid;
+  height: 400px;
+  align-content:flex-start;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 200px 200px 200px;
+  margin-right: 75px;
+  grid-gap: 20px;
+  background-color: lightgray;
+  padding: 20px
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.footer {
+  padding: 15px;
+  margin-right: 75px;
+  display: block;
+  text-align: center;
+}
