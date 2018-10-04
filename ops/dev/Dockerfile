@@ -8,9 +8,10 @@ RUN apt-get update -yqq && \
     apt-get install -yqq --no-install-recommends nodejs yarn && \
     ln -nfs /usr/lib/x86_64-linux-gnu/libssl.so.1.0.2 /usr/lib/x86_64-linux-gnu/libssl.so
 
-WORKDIR /app
+ENV app /app
+RUN mkdir $app
+WORKDIR $app
 
-COPY Gemfile Gemfile.lock /app/
-RUN bundle install
+ENV BUNDLE_PATH /box
 
-COPY . /app
+COPY . $app
