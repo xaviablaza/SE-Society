@@ -17,8 +17,9 @@ services:
       context: .
       dockerfile: ops/dev/Dockerfile
     image: app
-    command: bash -c "yarn && bundle exec rails s -b 0.0.0.0"
+    command: ./script/start
     volumes:
+      - box:/box
       - ./:/app
     ports:
       - "3000:3000"
@@ -44,4 +45,5 @@ services:
 volumes:
   redis:
   postgres:
+  box:
 
