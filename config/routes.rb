@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated do
-      root "homepage#homepage"
+      root "dashboard#show"
     end
 
     unauthenticated do
-      root "devise/sessions#new"
+      root "homepage#show"
     end
   end
 end
