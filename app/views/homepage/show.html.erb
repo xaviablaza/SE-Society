@@ -6,20 +6,50 @@
   <p>Society of Software Engineers </p>
   <div class="container">
     <div class="nav">
-      <a href="item1">Item 1 </a>
-      <a href="item2">Item 2 </a>
-      <a href="item3">Item 3 </a>
-      <a href="item4">Item 4 </a>
-      <a href="item4">Item 5 </a>
-      <a href="item4">Item 6 </a>
+      <div class="dropdown">
+        <p class="dropbtn">Future Software Engineers</p>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">Professional Development</div>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">Standards and Resources</div>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">About SoSE</div>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
     </div>
+
     <div class="container-main">
       <div class="join-container">
         <div class="join">
           <p> Are you a member?</p>
           <br>
           <p> Join Society of Software Engineers Today!</p>
-          <button class="button">Sign Up</button>
+          <%= link_to('Sign Up', new_user_registration_path, class: 'button') %>
         </div>
       </div>
     </div>
