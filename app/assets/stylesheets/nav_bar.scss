@@ -1,0 +1,111 @@
+// Place all the styles related to the professional-development controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header_ {
+    background-color: #edeeef;
+    overflow: hidden;
+}
+
+.header_ a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.header_ a:hover {
+    background-color: #9b2603;
+    color: black;
+}
+
+.header_ a.active {
+    background-color: #5e5c5c;
+    color: white;
+}
+.main_ {
+  float: center;
+  text-align: left;
+  font-size: 45px;
+  margin-left: 75px;
+}
+
+.container_{
+  margin-right: 75px;
+  margin-top: -40px;
+}
+
+.container-main_ {
+  height: 100%;
+  width: 100%;
+  margin-top: -70px;
+  background-color: white;
+}
+
+.nav_ {
+    background-color: #5e5c5c;
+    overflow: hidden;
+}
+
+.nav_ a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav_ a:hover, .dropdown_:hover .dropbtn_{
+    background-color: #a5080a;
+    color: black;
+}
+
+.nav_ a.active {
+    background-color: #5e5c5c;
+    color: black;
+}
+
+.dropdown_ {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown_ .dropbtn_ {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content_ {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content_ a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content_ a:hover {
+    background-color: #ddd;
+}
+
+.dropdown_:hover .dropdown-content_ {
+    display: block;
+}
