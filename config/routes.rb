@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'future_engineers/info'
+  get 'future_engineers/life'
+  get 'future_engineers/paths'
   get 'standards_resources/conduct'
   get 'standards_resources/standards'
   get 'standards_resources/scoring'
