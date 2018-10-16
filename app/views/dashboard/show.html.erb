@@ -1,5 +1,80 @@
-<span>Welcome <%= current_user.email %>!</span>
+<div class="header">
+  <span>Welcome back, <%= current_user.email %>! <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'active') %></span>
+</div>
+
+<div class="main">
+  <p>Society of Software Engineers </p>
+  <div class="container">
+    <div class="nav">
+      <div class="dropdown">
+        <p class="dropbtn">Future Software Engineers</p>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">Professional Development</div>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">Standards and Resources</div>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn">About SoSE</div>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-main">
+      <div class="join-container">
+        <div class="join">
+          <p> Welcome back,</p>
+          <br>
+          <p> <%= current_user.email %>! </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="footer">
+    <h3>Contact</h3>
+  </div>
+</div>
 
 
 
-<div> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </div>
+
+
+
+
+<!--<span>Welcome back, <%= current_user.email %>!</span>-->
+
+
+
+<!--<div> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </div>-->
