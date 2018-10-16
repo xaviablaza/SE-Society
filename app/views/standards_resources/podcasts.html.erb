@@ -1,0 +1,52 @@
+<div class="header">
+  <%= link_to "Home", root_path, class: 'active'%>
+</div>
+
+<div class="main_">
+  <p>Society of Software Engineers </p>
+  <div class="container_">
+    <div class="nav_">
+      <div class="dropdown_">
+        <p class="dropbtn_">Future Software Engineers</p>
+        <div class="dropdown-content_">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown_">
+        <div class="dropbtn_">Professional Development</div>
+        <div class="dropdown-content_">
+          <%=link_to "Exams and Certification", professional_development_exams_path %>
+          <%=link_to "Books", professional_development_books_path %>
+          <%=link_to "Software Engineer of the Future", professional_development_future_path %>
+        </div>
+      </div>
+
+      <div class="dropdown_">
+        <p class="dropbtn_">Standards and Resources</p>
+        <div class="dropdown-content_">
+          <%=link_to "Code of Professional Conduct", standards_resources_conduct_path %>
+          <%=link_to "SE Coding Standards and Best Practices", standards_resources_standards_path%>
+          <%=link_to "Employer Scoring", standards_resources_scoring_path %>
+          <%=link_to "Salaries and Demographics", standards_resources_demographics_path %>
+          <%=link_to "Podcasts", standards_resources_podcasts_path%>
+        </div>
+      </div>
+
+      <div class="dropdown_">
+        <p class="dropbtn_">About SoSE</p>
+        <div class="dropdown-content_">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-main_">
+    <h1>Podcasts</h1>
+  </div>
