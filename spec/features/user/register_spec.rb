@@ -42,4 +42,20 @@ RSpec.describe "User registers", type: :feature do
     end
   end
 
+  context "with taken username" do
+    it "shows you an error message" do
+      visit new_user_registration_path
+      fill_in "Email", with: new_user.email
+      fill_in "Password", with: new_user.password
+      fill_in "Password confirmation", with: new_user.password_confirmation
+      fill_in "First name", with: new_user.first_name
+      fill_in "Last name", with: new_user.last_name
+      fill_in "Username", with: taken_user.username
+      click_on "Sign up"
+
+      expect(page).to have_content "Username has already been taken"
+    end
+  end
+
+
 end
