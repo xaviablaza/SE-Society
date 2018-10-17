@@ -1,5 +1,5 @@
 <div class="header">
-  <span>Welcome back, <%= current_user.email %>! <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'active') %></span>
+  <span>Welcome, <%= current_user.email %>! <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'active') %></span>
 </div>
 
 <div class="main">
@@ -46,9 +46,6 @@
     <div class="container-main">
       <div class="join-container">
         <div class="join">
-          <p> Welcome back,</p>
-          <br>
-          <p> <%= current_user.email %>! </p>
         </div>
       </div>
     </div>
