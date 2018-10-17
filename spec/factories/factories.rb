@@ -5,6 +5,6 @@ FactoryBot.define do
     password_confirmation { "password" }
     first_name { "John" }
     last_name { "Smith" }
-    username { "johnsmith" }
+    sequence(:username) { |i| "johnsmith_#{i}" }
   end
 end
