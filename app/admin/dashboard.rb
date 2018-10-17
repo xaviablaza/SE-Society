@@ -10,6 +10,12 @@ ActiveAdmin.register_page "Dashboard" do
           para "There are " + User.count.to_s + " users registered."
         end
       end
+
+      column do
+        panel "Website Views" do
+          para "There are " + Ahoy::Visit.count.to_s + " website views."
+        end
+      end
     end
 
     # Here is an example of a simple dashboard with columns and panels.
