@@ -80,7 +80,7 @@ RSpec.describe "User registers", type: :feature do
       fill_in "Username", with: new_user.username
       click_on "Sign up"
 
-      expect(page).to have_content "Dashboard Page"
+      expect(page).to have_content "Welcome"
     end
   end
 

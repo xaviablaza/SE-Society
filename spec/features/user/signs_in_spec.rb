@@ -11,7 +11,7 @@ RSpec.describe "User signs in", type: :feature do
       fill_in "Password", with: user.password
       click_on "Log in"
 
-      expect(page).to have_content "Dashboard"
+      expect(page).to have_content "Welcome"
     end
   end
 
