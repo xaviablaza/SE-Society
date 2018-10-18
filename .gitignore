@@ -45,3 +45,4 @@ storage/.keep
 /db/*.sqlite3-journal
 
 .DS_Store
+.idea/
