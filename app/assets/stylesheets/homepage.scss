@@ -37,6 +37,10 @@
   margin-left: 75px;
 }
 
+.main-title {
+  font-family: "Lucida Console";
+}
+
 .container{
   margin-right: 75px;
   margin-top: -40px;
@@ -45,7 +49,7 @@
 .container-main {
   height: 550px;
   width: 100%;
-  background-color: lightgray;
+  background-image: url("https://www.chapman.edu/law/_files/lawschooldusk2.jpg")  ;
 }
 
 .nav {
@@ -117,22 +121,28 @@
 .join-container {
   float: left;
   height: 350px;
-  width: 250px;
-  background-color: gray;
+  width: 300px;
+  background-color: white;
   margin-top: 50px;
   margin-left: 50px;
+  opacity: .9;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
 }
 
 .join {
   margin: 10px;
-  font-size: 21px;
+  font-size: 25px;
+  font-family: "Lucida Console";
 }
 
 .button {
   margin-top: 25px;
   border: none;
   color: white;
-  padding: 12px 28px;
+  padding: 16px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -153,7 +163,7 @@
 
 .grid-container > div{
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
+  text-align: margin-left;
   margin-bottom: 20px;
   padding: 20px 0;
   font-size: 30px;
@@ -164,4 +174,12 @@
   margin-right: 75px;
   display: block;
   text-align: center;
+}
+
+.footer h3{
+  font-size: 24px;
+}
+
+.footer p {
+  font-size: 16px;
 }
