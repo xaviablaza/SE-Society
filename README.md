@@ -5,6 +5,8 @@ Staging: https://sose.uxsociety.org
 
 Design: https://www.figma.com/file/Nyu25Zl5hiW4BrUCS2U7OK6j/SeSociety
 
+Reference: https://www.soa.org/future-actuaries/value-proposition/
+
 ## Environment Setup
 
 To start the server from scratch, run the following, then navigate to localhost:3000
