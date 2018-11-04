@@ -1,0 +1,35 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-main_ {
+  margin-top: 3%;
+  margin-left: 2%;
+  padding-top: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: white;
+  max-width: 65%;
+}
+
+.background-block_ {
+  padding-top: 1px;
+  padding-right: 15px;
+  max-width: 92.5%;
+  background-color: #F2F2F2;
+}
+.container-main_ p{
+  font-size: 14px;
+}
+
+.container-main_ h1{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.information {
+  width: 500px;
+}
