@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'about/description'
+  get 'about/goals'
+  get 'about/membership'
   get 'future_engineers/info'
   get 'future_engineers/life'
   get 'future_engineers/paths'
