@@ -69,6 +69,12 @@ RSpec.describe "Page navigation from root", type: :feature do
       click_on "Podcasts"
       expect(page).to have_content "Podcasts"
     end
+
+    it "shows you the homepage after you click on logo" do
+      visit root_path
+      click_on "Society of Software Engineers"
+      expect(page).to have_content "Sign Up"
+    end
   end
 
 end
