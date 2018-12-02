@@ -3,42 +3,45 @@
 </div>
 
 <div class="main">
-  <p>Society of Software Engineers </p>
+  <p class="main-title"><%= link_to('Society of Software Engineers', root_path, class: 'active')%></p>
+  <!--<p class="main-title">Society of Software Engineers </p>-->
   <div class="container">
     <div class="nav">
       <div class="dropdown">
         <p class="dropbtn">Future Software Engineers</p>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <%= link_to "What is a Software Engineer", future_engineers_info_path %>
+          <%= link_to "Day in the Life", future_engineers_life_path %>
+          <%= link_to "Career Paths", future_engineers_paths_path %>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropbtn">Professional Development</div>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <%= link_to "Exams and Certification", professional_development_exams_path %>
+          <%= link_to "Books", professional_development_books_path %>
+          <%= link_to "Software Engineer of the Future", professional_development_future_path %>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropbtn">Standards and Resources</div>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <%= link_to "Code of Professional Conduct", standards_resources_conduct_path %>
+          <%= link_to "SE Coding Standards and Best Practices", standards_resources_standards_path%>
+          <%= link_to "Employer Scoring", standards_resources_scoring_path %>
+          <%= link_to "Salaries and Demographics", standards_resources_demographics_path %>
+          <%= link_to "Podcasts", standards_resources_podcasts_path%>
         </div>
       </div>
 
       <div class="dropdown">
         <div class="dropbtn">About SoSE</div>
         <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <%= link_to "What is SoSE?", about_description_path %>
+          <%= link_to "Membership", about_membership_path %>
+          <%= link_to "Goals and Purpose", about_goals_path %>
         </div>
       </div>
     </div>
@@ -46,32 +49,25 @@
     <div class="container-main">
       <div class="join-container">
         <div class="join">
+          <p> Are you a member?</p>
+          <p> Join Society of Software Engineers Today!</p>
+          <%= link_to('Sign Up', new_user_registration_path, class: 'button') %>
         </div>
       </div>
     </div>
   </div>
   <div class="grid-container">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <table>
+      <td> <a class="twitter-timeline" data-width="400" data-height="400" href="https://twitter.com/IEEEorg?ref_src=twsrc%5Etfw">Tweets by IEEEorg</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <td><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+        <script type="IN/JYMBII" data-format="inline"></script></td>
+      <td> <img src="https://i.pinimg.com/originals/84/37/52/843752af8cfed74ae1a80bc23ba5876b.jpg" width= "300" length="350"> </td>
+    </table>
   </div>
 
   <div class="footer">
     <h3>Contact</h3>
+    <p>Email: genericemail@email.com</p>
+    <p>Phone: (714) 695 - 7869</p>
   </div>
 </div>
-
-
-
-
-
-
-
-<!--<span>Welcome back, <%= current_user.email %>!</span>-->
-
-
-
-<!--<div> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </div>-->
