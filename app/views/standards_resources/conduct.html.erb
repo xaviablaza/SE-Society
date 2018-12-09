@@ -9,6 +9,9 @@
       <div class="dropdown_">
         <p class="dropbtn_">Future Software Engineers</p>
         <div class="dropdown-content_">
+          <%= link_to "What is a Software Engineer", future_engineers_info_path %>
+          <%= link_to "Day in the Life", future_engineers_life_path %>
+          <%= link_to "Career Paths", future_engineers_paths_path %>
           <%=link_to "What is a Software Engineer", future_engineers_info_path %>
           <%=link_to "Day in the Life", future_engineers_life_path %>
           <%=link_to "Career Paths", future_engineers_paths_path %>
@@ -18,20 +21,20 @@
       <div class="dropdown_">
         <div class="dropbtn_">Professional Development</div>
         <div class="dropdown-content_">
-          <%=link_to "Exams and Certification", professional_development_exams_path %>
-          <%=link_to "Books", professional_development_books_path %>
-          <%=link_to "Software Engineer of the Future", professional_development_future_path %>
+          <%= link_to "Exams and Certification", professional_development_exams_path %>
+          <%= link_to "Books", professional_development_books_path %>
+          <%= link_to "Software Engineer of the Future", professional_development_future_path %>
         </div>
       </div>
 
       <div class="dropdown_">
         <p class="dropbtn_">Standards and Resources</p>
         <div class="dropdown-content_">
-          <%=link_to "Code of Professional Conduct", standards_resources_conduct_path %>
-          <%=link_to "SE Coding Standards and Best Practices", standards_resources_standards_path%>
-          <%=link_to "Employer Scoring", standards_resources_scoring_path %>
-          <%=link_to "Salaries and Demographics", standards_resources_demographics_path %>
-          <%=link_to "Podcasts", standards_resources_podcasts_path%>
+          <%= link_to "Code of Professional Conduct", standards_resources_conduct_path %>
+          <%= link_to "SE Coding Standards and Best Practices", standards_resources_standards_path%>
+          <%= link_to "Employer Scoring", standards_resources_scoring_path %>
+          <%= link_to "Salaries and Demographics", standards_resources_demographics_path %>
+          <%= link_to "Podcasts", standards_resources_podcasts_path%>
         </div>
       </div>
 
@@ -47,33 +50,36 @@
     </div>
   </div>
 
-  <div class = "background-block_">
+  <div class="background-block_">
     <div class="container-main_">
       <h1>Code of Professional Conduct</h1>
-      <div class = "information">
-        <ol>
-          <li>PUBLIC – Software engineers shall act consistently with the public interest.</li>
+      <div class="information">
+        <div class = "list">
+          <ol type="1">
+            <li><b>PUBLIC</b> – Software engineers shall act consistently with the public interest.</li>
 
-          <li>CLIENT AND EMPLOYER – Software engineers shall act in a manner that is in the
-          best interests of their client and employer consistent with the public interest.</li>
+            <li><b>CLIENT AND EMPLOYER</b> – Software engineers shall act in a manner that is in the
+            best interests of their client and employer consistent with the public interest.</li>
 
-          <li>PRODUCT – Software engineers shall ensure that their products and related modifications
-          meet the highest professional standards possible.</li>
+            <li><b>PRODUCT</b> – Software engineers shall ensure that their products and related modifications
+            meet the highest professional standards possible.</li>
 
-          <li>JUDGMENT – Software engineers shall maintain integrity and independence in their
-          professional judgment.</li>
+            <li><b>JUDGMENT</b> – Software engineers shall maintain integrity and independence in their
+            professional judgment.</li>
 
-          <li>MANAGEMENT – Software engineering managers and leaders shall subscribe to and
-          promote an ethical approach to the management of software development and maintenance.</li>
+            <li><b>MANAGEMENT</b> – Software engineering managers and leaders shall subscribe to and
+            promote an ethical approach to the management of software development and maintenance.</li>
 
-          <li>PROFESSION – Software engineers shall advance the integrity and reputation of the
-          profession consistent with the public interest.</li>
+            <li><b>PROFESSION</b> – Software engineers shall advance the integrity and reputation of the
+            profession consistent with the public interest.</li>
 
-          <li>COLLEAGUES – Software engineers shall be fair to and supportive of their colleagues.</li>
+            <li><b>COLLEAGUES</b> – Software engineers shall be fair to and supportive of their colleagues.</li>
 
-          <li>SELF – Software engineers shall participate in lifelong learning regarding the practice
-          of their profession and shall promote an ethical approach to the practice of the profession.</li>
-        </ol>
+            <li><b>SELF</b> – Software engineers shall participate in lifelong learning regarding the practice
+            of their profession and shall promote an ethical approach to the practice of the profession.</li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
+</div>
