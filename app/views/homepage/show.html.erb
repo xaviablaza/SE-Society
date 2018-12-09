@@ -1,10 +1,14 @@
 <div class="header">
-  <%= link_to('Log In', new_user_session_path, method: :new, class: 'active') %>
+  <% if user_signed_in? %>
+    <span><%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'active') %></span>
+  <% else %>
+    <%= link_to('Log In', new_user_session_path, method: :new, class: 'active') %>
+  <% end %>
 </div>
+
 
 <div class="main">
   <p class="main-title"><%= link_to('Society of Software Engineers', root_path, class: 'active')%></p>
-  <!--<p class="main-title">Society of Software Engineers </p>-->
   <div class="container">
     <div class="nav">
       <div class="dropdown">
@@ -47,13 +51,21 @@
     </div>
 
     <div class="container-main">
-      <div class="join-container">
-        <div class="join">
-          <p> Are you a member?</p>
-          <p> Join Society of Software Engineers Today!</p>
-          <%= link_to('Sign Up', new_user_registration_path, class: 'button') %>
+      <% if user_signed_in? %>
+        <div class="welcome-container">
+          <div class="join">
+            <p align="center"> Welcome, <%= current_user.first_name %>!</p>
+          </div>
         </div>
-      </div>
+      <% else %>
+        <div class="join-container">
+          <div class="join">
+            <p> Are you a member?</p>
+            <p> Join Society of Software Engineers Today!</p>
+            <%= link_to('Sign Up', new_user_registration_path, class: 'button') %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="grid-container">

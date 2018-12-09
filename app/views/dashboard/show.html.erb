@@ -4,7 +4,6 @@
 
 <div class="main">
   <p class="main-title"><%= link_to('Society of Software Engineers', root_path, class: 'active')%></p>
-  <!--<p class="main-title">Society of Software Engineers </p>-->
   <div class="container">
     <div class="nav">
       <div class="dropdown">
@@ -47,11 +46,9 @@
     </div>
 
     <div class="container-main">
-      <div class="join-container">
+      <div class="welcome-container">
         <div class="join">
-          <p> Are you a member?</p>
-          <p> Join Society of Software Engineers Today!</p>
-          <%= link_to('Sign Up', new_user_registration_path, class: 'button') %>
+          <p align="center"> Welcome, <%= current_user.first_name %>!</p>
         </div>
       </div>
     </div>

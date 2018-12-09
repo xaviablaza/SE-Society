@@ -20,7 +20,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated do
-      root "dashboard#show"
+      #root "dashboard#show"
+      root "homepage#show"
     end
 
     unauthenticated do
