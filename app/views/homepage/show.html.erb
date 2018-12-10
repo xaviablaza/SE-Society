@@ -1,3 +1,10 @@
+<head>
+  <meta charset="utf-8">
+  <title>Json to HTML</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <div class="header">
   <%= link_to('Log In', new_user_session_path, method: :new, class: 'active') %>
 </div>
@@ -61,7 +68,15 @@
       <td> <a class="twitter-timeline" data-width="400" data-height="400" href="https://twitter.com/IEEEorg?ref_src=twsrc%5Etfw">Tweets by IEEEorg</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <td><script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
 <script type="IN/JYMBII" data-format="inline"></script></td>
-      <td> <img src="https://i.pinimg.com/originals/84/37/52/843752af8cfed74ae1a80bc23ba5876b.jpg" width= "300" length="350"> </td>
+      <td>
+        <table class="table table-bordered table-striped" id="event_table">
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+          </tr>
+        </table>
+      </td>
     </table>
   </div>
 
@@ -71,3 +86,16 @@
     <p>Phone: (714) 695 - 7869</p>
   </div>
 </div>
+
+<script type="text/javascript">
+  $.getJson(<%= @events %>, function(data){
+    var event_data = '';
+    $.each(data, function(key, value){
+      event_data += '<tr>';
+        event_data += '<td>'+value.name+'<td>';
+        event_data += '<td>'+value.local_date+'<td>';
+        event_data += '<td'+value.local_time+'<td>';
+    });
+    $('event_table').append(event_data);
+  });
+</script>
